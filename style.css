@@ -1,0 +1,131 @@
+html{
+    height: 100%;
+}
+body {
+    /* боди */
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding-bottom: 0;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    background-attachment: fixed;
+    height: 100%;
+    
+}
+
+.grid {
+    /* сетка */
+    display: grid;
+    grid-template-rows: 65px auto auto auto;
+    min-height: 100%;
+    grid-template-areas:
+        "header"
+        "aside"
+        "article"
+        "footer";
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (min-width: 1100px) {
+    .grid {
+        grid-template-columns: 4fr 230px;
+        grid-template-rows: 80px auto auto auto;
+        grid-template-areas:
+            "header header"
+            "article aside"
+            "footer footer";
+        margin-left: 100px;
+        margin-right: 100px;
+        min-height: 100%;
+    }
+}
+
+header {
+    grid-area: header;
+    color: #BFC3BA;
+    font-size: 50px;
+    text-shadow:4px 4px 5px #AAAAAA; 
+}
+article {
+    grid-area: article;
+   
+}
+@media (min-width: 1100px){
+    article{
+        margin-right: 10px;
+        position: inherit;
+    } 
+}
+
+img {
+    width: 200px;
+}
+@media (min-width:1100px){
+     img{
+        width: 500px;
+        
+    }
+}
+
+.log, .select {
+    background-color: #BFC3BA;
+    color: #000000;
+    text-align: justify;
+    padding: 0.5em;
+}
+
+
+
+.select{
+    background-color: #BFC3BA;
+}
+
+aside {
+    grid-area: aside;
+    
+}
+
+aside a {
+    color: #ffffff;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+article a:hover{
+    color: #111D4A;
+    text-decoration: underline;
+}
+a:hover {
+    color: #BFC3BA;
+}
+
+.line {
+    background-color: #111D4A;
+    color: #BFC3BA;
+    text-align: justify;
+    padding: 0.5em;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    color: #BFC3BA;
+    text-decoration: underline;
+    background-color: #1E1E24;
+    height: 50px;
+    font-size: 30px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+footer {
+    align-self: flex-end;
+    grid-area: footer;
+    background-color: #1E1E24;
+}
